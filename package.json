@@ -1,0 +1,23 @@
+{
+  "name": "cnid",
+  "version": "1.0.0",
+  "description": "CNID Tech Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varjmes/cnid.git"
+  },
+  "author": "James Spencer <hello@jmes.tech>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varjmes/cnid/issues"
+  },
+  "homepage": "https://github.com/varjmes/cnid#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
