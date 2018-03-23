@@ -69,15 +69,15 @@ describe("article route", () => {
         expect($("blockquote").hasClass("article__quote")).toBe(true)
       })
     })
+  })
 
-    describe("when the article does not exist", () => {
-      const agent404 = request.agent(app).get("/article/999")
+  describe("when the article does not exist", () => {
+    const agent404 = request.agent(app).get("/article/999")
 
-      it("should respond with a 404", () => {
-        return agent404.then(response => {
-          expect(response.statusCode).toBe(404)
-          expect(response.text).toEqual("Article not found :(")
-        })
+    it("should respond with a 404", () => {
+      return agent404.then(response => {
+        expect(response.statusCode).toBe(404)
+        expect(response.text).toEqual("Article not found :(")
       })
     })
   })
