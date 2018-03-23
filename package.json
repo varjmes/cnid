@@ -1,7 +1,7 @@
 {
   "name": "cnid",
   "version": "1.0.0",
-  "description": "CNID Tech Test",
+  "description": "CNID",
   "main": "index.js",
   "scripts": {
     "test": "PORT=3001 jest --coverage --forceExit",
