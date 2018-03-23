@@ -4,8 +4,8 @@
   "description": "CNID Tech Test",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --forceExit",
-    "start": "node index.js"
+    "test": "PORT=3001 jest --coverage --forceExit",
+    "start": "PORT=3000 node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/varjmes/cnid#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "pug": "^2.0.2"
   },
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "jest": "^22.4.2",
     "supertest": "^3.0.0"
   }

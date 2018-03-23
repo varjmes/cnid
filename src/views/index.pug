@@ -1,0 +1,13 @@
+html(lang="en-gb")
+  head
+    title= title
+    link(rel='stylesheet', href='/css/index.css')
+  body
+    main(class="articles")
+      h1 CNID
+      ul(class="articles__list")
+        each article in articles
+          li(class="articles__item")
+            h2(class="articles__item-heading")
+              a(href=`/article/${article.id}`)= article.title
+            img(src=article.cover, class="articles__item-image")

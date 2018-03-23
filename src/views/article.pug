@@ -1,0 +1,17 @@
+html(lang="en-gb")
+  head
+    title= title
+    link(rel='stylesheet', href='/css/index.css')
+  body
+    main(class="article")
+      h1(class="article__title")= article.title
+      div(class="article__image", style=`background-image: url("${article.cover}");`)
+      article
+        each item in article.body
+          case item.type
+            when "h2"
+              h2(class="article__subheading")= item.body
+            when "pull_quote"
+              blockquote(class="article__quote")= item.body
+            default
+              p(class="article__plaintext")= item.body
