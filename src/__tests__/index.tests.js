@@ -32,7 +32,7 @@ describe("index route", () => {
 })
 
 describe("article route", () => {
-  const agent = request.agent(app).get("/article/0")
+  const agent = request.agent(app).get(`/article/0`)
   const article = articles[0]
 
   describe("when the article exists", () => {

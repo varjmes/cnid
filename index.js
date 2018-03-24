@@ -1,6 +1,5 @@
 "use strict"
 
-const fs = require("fs")
 const express = require("express")
 const articles = require("./src/data.json")
 

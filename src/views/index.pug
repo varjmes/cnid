@@ -1,7 +1,8 @@
 html(lang="en-gb")
   head
     title= title
-    link(rel='stylesheet', href='/css/index.css')
+    link(rel="stylesheet", href="/css/index.css")
+    script(type="text/javascript", src="/js/index.js")
   body
     main(class="articles")
       h1 CNID
@@ -10,4 +11,4 @@ html(lang="en-gb")
           li(class="articles__item")
             h2(class="articles__item-heading")
               a(href=`/article/${article.id}`)= article.title
-            img(src=article.cover, class="articles__item-image")
+            img(data-src=article.cover, class="articles__item-image js-image")
