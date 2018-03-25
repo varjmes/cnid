@@ -1,6 +1,7 @@
 "use strict"
 
 const express = require("express")
+const httpsRedirect = require("./src/lib/httpsRedirect")
 const articles = require("./src/data.json")
 
 const PORT = process.env.PORT || 3000
@@ -8,6 +9,7 @@ const app = express()
 app.set("view engine", "pug")
 app.set("views", "./src/views", { maxAge: 86400000 })
 app.use(express.static("public"))
+app.use(httpsRedirect)
 
 app.get("/", (req, res) => {
   res.render("index", { articles })
