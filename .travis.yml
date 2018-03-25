@@ -1,10 +1,17 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm test
+- npm test
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: vpygmJ/RDZDc6iK8RArGLUkOcJHLJXKeCIMabTa1vKT5Vktv3Bf2NZ9aXKZYsTyQCjM6UDZPQk59rNRLATqM7H04CuGUO/A9oZ6HTCbMHnhQ6XyVxZhA90XUO/llyhAQDrb/tYYfOAessPQ+XYmy/iBv/WVqR1myP+fHUK9Xfqn1qLW5BJ0mm4O8gJ+5r5xfm+2Sa9tGe9kOV0M4f8Q3oA6CSZscqilyPzEqvLhsoUKT7zGjekb5VirCUZDi9jObDorGMmqOTN1CirgrVtKiozYE7SRw/SKavBMdCd7dBRhkhvBX8VzyoRlZsvW60LtZphQ1+BnCFsg5UHWrmXkgWSIR3A3GY//lOGWqCn8cM4UlZSIHGrG1lUSoBoMbHiyG4bPJdsu7lbIT1Uxmh07+IM/VIifdMfSBkN13v38rWpnwHTjZyRDZVRFOCO7XC+NvsZE+W2iKDa95MYBGvo/uu0aB2m6b+UkenYKz/jr/atnySugjdepkXXRfBmsSy3U11JzcwcNTe8TpmPHAZ27d/5GqXLeI1R8nH33dTERDIWth3eVRp9N8Y5cygbgipdpGFWc2dx3pEBWyJeGVUIuESZ/DnHwjxA5QrMOCvePUsih10VI6DJmoMDywTTUG7GJ6xMwcwUrv6JkERdnEkjtjO+oHUilJ43wOpqPd9e/cHbE=
+  app: cnid
+  on:
+    repo: varjmes/cnid
