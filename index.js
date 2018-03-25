@@ -6,7 +6,7 @@ const articles = require("./src/data.json")
 const PORT = process.env.PORT
 const app = express()
 app.set("view engine", "pug")
-app.set("views", "./src/views")
+app.set("views", "./src/views", { maxAge: 86400000 })
 app.use(express.static("public"))
 
 app.get("/", (req, res) => {
