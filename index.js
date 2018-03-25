@@ -3,7 +3,7 @@
 const express = require("express")
 const articles = require("./src/data.json")
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 const app = express()
 app.set("view engine", "pug")
 app.set("views", "./src/views", { maxAge: 86400000 })
