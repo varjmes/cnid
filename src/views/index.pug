@@ -12,4 +12,27 @@ html(lang="en-gb")
           li(class="articles__item")
             h2(class="articles__item-heading")
               a(href=`/article/${article.id}`)= article.title
-            img(data-src=article.cover, class="articles__item-image js-image")
+            img(data-src=article.cover, class="articles__item-image js-image"
+                alt="we should get some real alt text for these images")
+    script.
+      document.addEventListener("DOMContentLoaded", function(event) {
+        const images = document.querySelectorAll(".js-image")
+        const config = {
+          rootMargin: "50px 0px",
+          threshold: 0.01
+        }
+
+        let observer = new IntersectionObserver(onIntersection, config)
+        images.forEach(image => {
+          observer.observe(image)
+        })
+
+        function onIntersection(entries) {
+          entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+              observer.unobserve(entry.target)
+              entry.target.src = entry.target.dataset.src
+            }
+          })
+        }
+     })
